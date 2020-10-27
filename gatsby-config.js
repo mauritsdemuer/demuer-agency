@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `De Muer Agency`,
+    description: `Belgium based Artist Agency`,
+    author: `Maurits`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -27,6 +27,32 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
+    {
+
+      resolve: "gatsby-source-graphql",
+      
+      options: {
+      
+      typeName: "WPGraphql",
+      
+      fieldName: "wpcontent",
+      
+      url: "http://de-muer-agency.local/graphql",
+      
+      }
+    },
+
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Roboto', 'Oswald'],
+        // Zorgt ervoor dat dit als eerste wordt ingeladen
+        display: 'swap'
+      },
+    }
+      
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
