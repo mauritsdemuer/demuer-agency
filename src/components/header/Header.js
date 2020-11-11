@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => {
         }
       }
     }
-   `)
+  `)
 
   return (
     <HeaderWrapper>
